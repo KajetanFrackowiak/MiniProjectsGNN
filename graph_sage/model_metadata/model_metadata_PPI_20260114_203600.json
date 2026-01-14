@@ -1,0 +1,18 @@
+{
+    "timestamp": "20260114_203600",
+    "seed": 1008238719,
+    "model_parameters": {
+        "total_params": 87929,
+        "trainable_params": 87929,
+        "non_trainable_params": 0
+    },
+    "config": {
+        "learning_rate": 0.01,
+        "weight_decay": 0.0001,
+        "epochs": 200,
+        "hidden_channels": 256,
+        "dropout": 0.5,
+        "sage_aggr": "mean",
+        "batch_size": 512
+    }
+}
