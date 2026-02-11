@@ -2,10 +2,10 @@ import argparse
 import json
 import os
 import secrets
-import wandb
 from datetime import datetime
 from typing import cast
 
+import wandb
 import torch
 from torch_geometric.data import Data
 from torch_geometric.loader import DataLoader
