@@ -2,16 +2,17 @@ import argparse
 import json
 import os
 import secrets
+import wandb
 from datetime import datetime
 from typing import cast
 
 import torch
-import wandb
+from torch_geometric.data import Data
+from torch_geometric.loader import DataLoader
+
 from evaluate import Evaluator
 from gat import GAT
 from load_data import load_data
-from torch_geometric.data import Data
-from torch_geometric.loader import DataLoader
 from training import Trainer
 from utils import load_hyperparameters, plot_training_stats, save_metadata, set_seed
 
