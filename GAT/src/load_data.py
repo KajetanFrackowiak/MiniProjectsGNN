@@ -1,4 +1,5 @@
 from typing import cast
+
 from torch_geometric.data import Data, Dataset
 from torch_geometric.datasets import PPI, Planetoid
 

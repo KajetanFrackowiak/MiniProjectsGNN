@@ -5,8 +5,8 @@ import secrets
 from datetime import datetime
 from typing import cast
 
-import wandb
 import torch
+import wandb
 from torch_geometric.data import Data
 from torch_geometric.loader import DataLoader
 
