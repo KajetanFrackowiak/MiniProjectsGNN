@@ -1,0 +1,21 @@
+# GitHub
+.swp
+
+# Python
+__pycache__/
+
+# Virtual Environment
+.venv/
+
+# Model & Training Output
+checkpoints/
+
+# Data
+data/
+
+# Experiment Tracking
+wandb/
+
+# IDE
+.vscode/
+.ruff_cache/

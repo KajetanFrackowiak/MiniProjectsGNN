@@ -17,14 +17,6 @@ This repository provides a clean, reproducible implementation of [Graph Attentio
 # Sync dependencies and create virtual environment
 uv sync
 source .venv/bin/activate
-
-# Install git hooks for code quality (Ruff)
-cd ../
-pre-commit install
-
-# Manual check for linting and formatting
-ruff check .
-ruff format .
 ```
 
 ### Training
