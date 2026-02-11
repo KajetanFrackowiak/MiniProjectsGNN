@@ -14,6 +14,7 @@ This repository provides a clean, reproducible implementation of [Graph Attentio
 
 ### 2. Installation
 ```bash
+curl -LsSf https://astral.sh/uv/install.sh | sh
 # Sync dependencies and create virtual environment
 uv sync
 source .venv/bin/activate
