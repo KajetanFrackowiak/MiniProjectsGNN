@@ -18,6 +18,6 @@ Each project has its own README with documentation, setup instructions, and benc
 1. Clone and navigate to the repository
 2. Install pre-commit hooks:
    ```bash
-   pre-commit install
+   pip install pre-commit
    ```
 3. Each project has its own setup instructions and prerequisites - see individual README files
