@@ -21,10 +21,3 @@ Each project has its own README with documentation, setup instructions, and benc
    pre-commit install
    ```
 3. Each project has its own setup instructions and prerequisites - see individual README files
-
-### Quick Start
-```bash
-cd GAT
-pip install -e .
-python src/main.py
-```
