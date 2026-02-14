@@ -2,7 +2,7 @@
 name = "gat-research"
 version = "0.1.0"
 description = "GAT research project for Object-Centric MBRL baselines"
-requires-python = "==3.12.2"
+requires-python = ">=3.12.2"
 dependencies = [
     "torch==2.3.1+cu118",
     "torchvision==0.18.1+cu118",
