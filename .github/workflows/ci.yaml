@@ -2,45 +2,36 @@ name: CI
 
 on:
   push:
-    branches: [ "**" ]
+    branches: [ "main" ]
   pull_request:
     branches: [ "**" ]
 
 jobs:
-  lint-and-format:
+  quality:
+    name: Check ${{ matrix.project }}
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        project: [GAT]
+        project: [ "GAT" ]
       fail-fast: false
-
+    
     defaults:
       run:
         working-directory: ${{ matrix.project }}
-
+    
     steps:
       - uses: actions/checkout@v4
 
       - name: Install uv
-        uses: astral-sh/setup-uv@v3
+        uses: astral-sh/setup-uv@v5
         with:
-          version: "latest"
-
-      - name: Set up Python
-        run: uv python install 3.12
+          python-version: "3.12"
+          enable-cache: true
 
       - name: Install dependencies
+        run: uv sync --frozen
+      
+      - name: Lint & Format
         run: |
-          if [ -f "pyproject.toml" ]; then
-            uv sync --frozen
-          elif [ -f "requirements.txt" ]; then
-            uv pip install -r requirements.txt
-          fi
-      - name: Check formatting (Ruff)
-        run: uv run ruff format --check .
-
-      - name: Lint (Ruff)
-        run: uv run ruff check . --fix
-
-      - name: Check if changes are needed
-        run: git diff --exit-code
+          uv run ruff format --check .
+          uv run ruff check .
